@@ -16,12 +16,19 @@ spec:
           - name: revision
             value: main
           - name: pathInRepo
-            value: hello-world.yaml
+            value: hello.yaml
     - name: goodbye
       runAfter:
         - hello
       taskRef:
-        name: goodbye
+        resolver: git
+        params:
+          - name: url
+            value: https://github.com/geriom/hello-world-tkn
+          - name: revision
+            value: main
+          - name: pathInRepo
+            value: goodbye.yaml
       params:
       - name: username
         value: $(params.username)
