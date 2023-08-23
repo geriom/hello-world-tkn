@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1
 kind: Task
 metadata:
   annotations:
-    tekton.dev/signature: MEUCIGMuXvk5UQZQ+6OSYAvGOhtHIOrJWQH+XhQ551aqI8bJAiEAzxUSzQ3bEgOfbNoHAL+hymNxYrGN+wRR56GAVOlb1QM=
+    tekton.dev/signature: MEUCIQDDlex7Byf4mHawg7PA0cv/RyxduJK70Hlpl46qgIkp/wIgaOdVQIpe3G7rRxn+ceJ2Y6kpRnXSwhNqwlPotiqTHQs=
   creationTimestamp: null
   name: hello
 spec:
