@@ -11,8 +11,7 @@ spec:
       - name: revision
         value: main
       - name: pathInRepo
-        value: pipeline.yaml
-    name: hello-goodbye
+        value: signed-pipeline.yaml
   params:
   - name: username
     value: "Tekton"
