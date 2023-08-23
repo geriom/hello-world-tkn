@@ -7,4 +7,4 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/part-of: tekton-pipelines
 data:
-  trusted-resources-verification-no-match-policy: "fail"
+  trusted-resources-verification-no-match-policy: "warn"
