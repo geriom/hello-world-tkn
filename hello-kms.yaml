@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  annotations:
+    tekton.dev/signature: MEUCIQDQOqKU5nFmLiIal6VTtl2UzNw2CkqDHVsf1dIt72tPKAIgMLoPOLBsK293DD0214SKrkVSzt0OcqqiUZJIEKZZroE=
+  creationTimestamp: null
+  name: hello
+spec:
+  steps:
+  - image: alpine
+    name: echo
+    resources: {}
+    script: |
+      #!/bin/sh
+      echo "Hello World"

@@ -1,0 +1,37 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  annotations:
+    tekton.dev/signature: MEUCIDlkmZgQr9YF1DJhYybrDctViUsyT0c8G1mnUgsgwYuXAiEA5HPnR44II2tqH7xG3g8qUlyDfYAyiBg7PGSIHe/apM0=
+  creationTimestamp: null
+  name: hello-goodbye
+spec:
+  params:
+  - name: username
+    type: string
+  tasks:
+  - name: hello
+    taskRef:
+      params:
+      - name: url
+        value: https://github.com/geriom/hello-world-tkn
+      - name: revision
+        value: main
+      - name: pathInRepo
+        value: hello-kms.yaml
+      resolver: git
+  - name: goodbye
+    params:
+    - name: username
+      value: $(params.username)
+    runAfter:
+    - hello
+    taskRef:
+      params:
+      - name: url
+        value: https://github.com/geriom/hello-world-tkn
+      - name: revision
+        value: main
+      - name: pathInRepo
+        value: goodbye-kms.yaml
+      resolver: git

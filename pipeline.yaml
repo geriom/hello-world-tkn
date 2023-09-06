@@ -16,7 +16,7 @@ spec:
           - name: revision
             value: main
           - name: pathInRepo
-            value: signed-hello.yaml
+            value: hello-kms.yaml
     - name: goodbye
       runAfter:
         - hello
@@ -28,7 +28,7 @@ spec:
           - name: revision
             value: main
           - name: pathInRepo
-            value: signed-goodbye.yaml
+            value: goodbye-kms.yaml
       params:
       - name: username
         value: $(params.username)

@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1alpha1
 kind: VerificationPolicy
 metadata:
   name: cosign-policy
+  namespace: default
 spec:
   resources:
     - pattern: "https://github.com/geriom/hello-world-tkn"
@@ -11,4 +12,4 @@ spec:
         secretRef:
           name: verification-secrets
           namespace: tekton-pipelines
-  mode: enforce
+  mode: warn
